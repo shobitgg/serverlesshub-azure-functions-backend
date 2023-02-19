@@ -9,13 +9,13 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: '3b6b6f17-dae3-4a37-acd2-cbba7c4a29cc'
+  azureSubscription: 'a87674c1-943b-41bd-8080-77d91c02bfab'
 
   # Function app name
-  functionAppName: 'sh-demo-dev-api'
+  functionAppName: 'shobit'
 
   # Environment name
-  environmentName: 'sh-demo-dev-api'
+  environmentName: 'shobit'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -75,7 +75,7 @@ stages:
         deploy:
           steps:
           - task: AzureFunctionApp@1
-            displayName: 'Azure Functions App Deploy: sh-demo-dev-api'
+            displayName: 'Azure Functions App Deploy: shobit'
             inputs:
               azureSubscription: '$(azureSubscription)'
               appType: functionAppLinux
